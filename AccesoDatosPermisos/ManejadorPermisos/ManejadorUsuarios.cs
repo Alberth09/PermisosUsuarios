@@ -100,5 +100,10 @@ namespace ManejadorPermisos
                 Console.WriteLine("Fallo en eliminar " + ex.Message);
             }
         }
+        public bool ExisteUsuario(Usuarios usuario)
+        {
+            var existe = _usuariosAccesoDatos.ExisteUsuario(usuario);
+            return existe;
+        }
     }
 }

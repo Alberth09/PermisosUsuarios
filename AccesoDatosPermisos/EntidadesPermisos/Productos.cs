@@ -8,14 +8,14 @@ namespace EntidadesPermisos
 {
     public class Productos
     {
-        private string _codigoBarra;
+        private string _codigoBarras;
         private string _nombre;
-        private string _descripcion;
+        private string _descripción;
         private string _marca;
 
-        public string CodigoBarra { get => _codigoBarra; set => _codigoBarra = value; }
+        public string CodigoBarras { get => _codigoBarras; set => _codigoBarras = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
-        public string Descripcion { get => _descripcion; set => _descripcion = value; }
+        public string Descripción { get => _descripción; set => _descripción = value; }
         public string Marca { get => _marca; set => _marca = value; }
     }
 }
