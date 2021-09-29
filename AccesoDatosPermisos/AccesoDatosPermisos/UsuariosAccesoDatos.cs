@@ -190,7 +190,7 @@ namespace AccesoDatosPermisos
         {
             try
             {
-                string consulta = string.Format("select count(*) from usuarios where nombre ='{0}' and contrasena = '{1}'", usuario.Nombre, usuario.Contraseña);
+                string consulta = string.Format("select count(*) from usuarios where nombre ='{0}' and contraseña = '{1}'", usuario.Nombre, usuario.Contraseña);
                 var existe = _conexion.Existencia(consulta);
                 if (existe == 1)
                 {
@@ -216,7 +216,7 @@ namespace AccesoDatosPermisos
         {
             try
             {
-                string consulta = string.Format("insert into productos values ('{0}','{1}','{2}','{3}')",
+                string consulta = string.Format("insert into producto values ('{0}','{1}','{2}','{3}')",
                     producto.CodigoBarras, producto.Nombre, producto.Marca, producto.Descripción);
                 _conexion.EjecutarConsulta(consulta);
             }
@@ -245,7 +245,7 @@ namespace AccesoDatosPermisos
         {
             try
             {
-                string consulta = string.Format("update productos set nombre = '{0}', descripción = '{1}', marca = '{2}' where CodigoBarras = '{3}'",
+                string consulta = string.Format("update producto set nombre = '{0}', descripción = '{1}', marca = '{2}' where CodigoBarras = '{3}'",
                 producto.Nombre, producto.Descripción, producto.Marca, producto.CodigoBarras);
                 _conexion.EjecutarConsulta(consulta);
             }
@@ -260,7 +260,7 @@ namespace AccesoDatosPermisos
         {
             var ListaProductos = new List<Productos>();
             var ds = new DataSet();
-            string consulta = string.Format("select * from productos where nombre like '%{0}%'", filtro);
+            string consulta = string.Format("select * from producto where nombre like '%{0}%'", filtro);
             ds = _conexion.ObtenerDatos(consulta, "productos");
 
             var dt = new DataTable();

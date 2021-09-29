@@ -29,7 +29,7 @@ namespace PresentacionesPermisos
             _usuarios.Contraseña = txtContraseña.Text;
             if (_usuariosManejador.ExisteUsuario(_usuarios))
             {
-                if (txtUsuario.Text == "Alberto" && txtContraseña.Text == "password")
+                if (txtUsuario.Text == "Alberto" && txtContraseña.Text == "Hola")
                 {
                     FrmMenu formmenu = new FrmMenu();
                     formmenu.Show();
